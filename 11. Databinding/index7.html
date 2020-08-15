@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"crossorigin="anonymous">
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+	<title>Vue </title>
+
+</head>
+<body>
+	<div id="root">
+	<img v-bind:src="myPicture.src" v-bind:alt="myPicture.alt" href="myPicture.href">
+	<!-- we want these values saved in the data object. So we can change them later simply -->
+
+	<!-- bu data object ile baglamak icin de v-bind directive'i kullaniyoruz (connecting the attribute with data)-->
+	</div>
+
+<!-- vue object -->
+<script type="text/javascript">
+var vm = new Vue({
+	el: "#root",
+	data: {
+		//we will make 3 strings: for src, alt, and href
+		myPicture: {src: "bongocat.jpg", alt: "bongocat", href: "#"}
+		// bir obje yaptik
+  }
+})
+</script>
+
+<style>
+	img {
+		max-height: 60%;
+		max-width: 70%;
+	}
+</style>
+
+</html>
